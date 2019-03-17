@@ -1,0 +1,42 @@
+footer {
+  width: 100%;
+
+  background-color: $color-footer;
+}
+
+.footer-content {
+  height: 10rem;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-content: space-between;
+  -ms-flex-line-pack: justify;
+  align-content: space-between;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+  &__logo {
+    display: block;
+    height: 4.2rem;
+    width: auto;
+  }
+
+  &__links {
+    a,
+    a:visited,
+    a:hover,
+    a:active {
+      text-decoration: none;
+    }
+    a:not(:last-child) {
+      margin-right: 4rem;
+    }
+  }
+}

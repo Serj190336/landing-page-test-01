@@ -1,0 +1,32 @@
+.team {
+  margin-top: 4.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  &-box {
+    margin-top: 4.8rem;
+    flex-basis: calc(33.33%);
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+.team-box {
+  &__logo {
+    float: left;
+    padding-left: 0.4rem;
+    padding-right: 3.4rem;
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  &__text {
+    padding-top: 1rem;
+    float: left;
+    &-sub {
+      margin-top: 1.2rem;
+      color: $color-fonts-3;
+    }
+  }
+}

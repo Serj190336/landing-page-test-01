@@ -1,0 +1,99 @@
+header {
+  margin: 6.1rem auto 0 auto;
+}
+
+.header-menu {
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-content: space-between;
+  -ms-flex-line-pack: justify;
+  align-content: space-between;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 4.2rem;
+
+  &__logo {
+    display: block;
+    height: 4.2rem;
+    width: auto;
+  }
+
+  &__btns {
+    a,
+    a:visited,
+    a:hover,
+    a:active {
+      text-decoration: none;
+      color: $color-fonts-1;
+    }
+
+    a:not(:last-child) {
+      margin-right: 4.1rem;
+    }
+    a:last-child {
+      margin-left: 1.8rem;
+    }
+  }
+}
+
+.header-content {
+  margin-top: 13.2rem;
+  min-height: 42rem;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+
+  &__main-text {
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    color: $color-fonts-1;
+  }
+
+  &__text-sub {
+    margin-top: -5.6rem;
+    color: $color-fonts-2;
+  }
+
+  &__btn {
+    a,
+    a:visited,
+    a:hover,
+    a:active {
+      text-decoration: none;
+      color: $color-fonts-1;
+      display: block;
+      text-align: center;
+      width: 23.5rem;
+      height: 6rem;
+      line-height: 60px;
+      color: $color-white;
+      background-color: $color-sheme-1;
+      border-radius: 10px;
+      -webkit-box-shadow: 0px 4px 14px -4px rgba(50, 50, 50, 0.85);
+      -moz-box-shadow: 0px 4px 14px -4px rgba(50, 50, 50, 0.85);
+      box-shadow: 0px 4px 14px -4px rgba(50, 50, 50, 0.85);
+    }
+  }
+}

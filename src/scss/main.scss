@@ -1,0 +1,63 @@
+/*
+@import "abstracts/functions";
+
+
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+@import "components/bg-video";
+@import "components/button";
+@import "components/card";
+@import "components/composition";
+@import "components/feature-box";
+@import "components/tours-box";
+@import "components/form";
+@import "components/popup";
+@import "components/story";
+@import "layout/footer";
+
+@import "layout/navigation";
+@import "pages/home";
+*/
+
+@import "abstracts/mixins";
+@import "abstracts/variables";
+@import "base/base";
+@import "base/typography";
+@import "components/clients-box";
+@import "components/services-box";
+@import "components/team-box";
+@import "layout/footer";
+@import "layout/header";
+@import "layout/grid";
+
+// Sections between header and footer
+.section {
+  margin-top: 9.6rem;
+  &-heading {
+    position: relative;
+    &__content {
+      color: $color-fonts-4;
+    }
+  }
+  &-heading:after {
+    content: "";
+    position: absolute;
+    top: calc(50%);
+    left: 0;
+    right: 0;
+    height: 0.5em;
+    border-top: 1px solid $color-fonts-4;
+    z-index: -1;
+  }
+
+  &-heading__content {
+    max-width: 120rem;
+    margin: 0 auto;
+    span {
+      padding: 0 1.7rem 0 1.7rem;
+      background-color: $color-white;
+    }
+  }
+}

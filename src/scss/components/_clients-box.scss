@@ -1,0 +1,12 @@
+.clients {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  &-box {
+    margin-top: 5rem;
+    flex-basis: calc(25%);
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+}

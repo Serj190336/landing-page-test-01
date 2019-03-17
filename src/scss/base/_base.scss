@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 10px;
+  color: $color-black;
+}
+
+body {
+  max-width: 198rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+// Containers to align content
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 1.7rem 0 1.7rem;
+}
+.container-0-padding {
+  max-width: 120rem;
+  margin: 0 auto;
+}

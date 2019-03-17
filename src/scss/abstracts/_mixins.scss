@@ -1,0 +1,15 @@
+@mixin clearfix {
+  &::after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+}
+
+@mixin font($font-family, $font-style, $font-weight, $font-size, $line-height) {
+  font-family: $font-family;
+  font-style: $font-style;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  line-height: $line-height;
+}

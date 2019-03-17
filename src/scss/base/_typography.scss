@@ -1,0 +1,48 @@
+body {
+  font-family: $main-font;
+  font-weight: 400;
+  line-height: 1.7rem;
+}
+
+h1 {
+  @include font($main-font, normal, normal, 5.8rem, normal);
+}
+
+h2 {
+  @include font($main-font, normal, normal, 3.2rem, normal);
+}
+
+h3 {
+  @include font($main-font, normal, normal, 2.8rem, normal);
+}
+
+h4 {
+  @include font($main-font, normal, normal, 1.6rem, normal);
+}
+
+h5 {
+  @include font($main-font, normal, normal, 1.4rem, normal);
+}
+
+// Top menu
+.header-menu {
+  &__btns {
+    @include font($main-font, normal, normal, 1.6rem, normal);
+  }
+}
+// Heading text and button
+.header-content {
+  &__text-sub {
+    @include font($main-font, normal, normal, 3.2rem, 5.7rem);
+  }
+  &__btn {
+    a {
+      @include font($main-font, normal, normal, 2.8rem, normal);
+    }
+  }
+}
+
+.section-heading {
+  @include font($main-font, normal, normal, 2rem, normal);
+  text-transform: uppercase;
+}
