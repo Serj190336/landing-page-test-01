@@ -24,8 +24,8 @@ h5 {
   @include font($main-font, normal, normal, 1.4rem, normal);
 }
 
-// Top menu
-.header-menu {
+// Top nav
+.header-nav {
   &__btns {
     @include font($main-font, normal, normal, 1.6rem, normal);
   }
