@@ -1,6 +1,4 @@
-// main SASS file
-import "../scss/main.scss";
-// JS sticky menu
-import "./sticky-nav.js";
-// smooth scrolling to anchors
-import "./smooth-scroll.js";
+import "../scss/main.scss"; // main SASS file
+import "./navbar.js"; // JS sticky menu
+
+//import "./hamburger-menu.js";

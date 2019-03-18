@@ -1,0 +1,170 @@
+//----------
+// Navar for desktop
+.header-nav {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  height: 10rem;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-content: space-between;
+  -ms-flex-line-pack: justify;
+  align-content: space-between;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 4.2rem;
+  transition: all 0.6s;
+  z-index: 99;
+  &__logo {
+    display: block;
+    height: 4.2rem;
+    width: auto;
+  }
+
+  &__btns {
+    a,
+    a:visited,
+    a:hover,
+    a:active {
+      text-decoration: none;
+      color: $color-fonts-1;
+    }
+    a:not(:last-child) {
+      margin-right: 4.1rem;
+    }
+    a:last-child {
+      margin-left: 1.8rem;
+    }
+  }
+}
+
+.fixed-nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 8rem;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+//----------
+// Navbar styles for mobile phone
+.nav-burg {
+  -webkit-transition: left 0.5s ease;
+  -moz-transition: left 0.5s ease;
+  -ms-transition: left 0.5s ease;
+  -o-transition: left 0.5s ease;
+  transition: left 0.5s ease;
+  background: $color-bg;
+  border-right: 1px solid $color-fonts-4;
+  cursor: pointer;
+  font-size: 2rem;
+  height: 100vh;
+  left: -20rem;
+  padding: 6rem 2rem 2rem 2rem;
+  position: fixed;
+  top: 0;
+  width: 20rem;
+  z-index: 1;
+}
+
+.nav-burg.expanded {
+  left: 0;
+}
+
+.nav-burg ul {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  li {
+    margin: 2rem;
+    a,
+    a:visited,
+    a:hover,
+    a:active {
+      text-decoration: none;
+      color: $color-fonts-1;
+    }
+  }
+}
+
+.nav-burg-toggle {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  height: 3rem;
+  width: 4rem;
+  position: fixed;
+  left: 2rem;
+  top: 2rem;
+  background-color: $color-bg;
+  z-index: 2;
+}
+
+.nav-burg-toggle .nav-burg-toggle-bar,
+.nav-burg-toggle .nav-burg-toggle-bar::after,
+.nav-burg-toggle .nav-burg-toggle-bar::before {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background: $color-black;
+  content: "";
+  height: 0.4rem;
+  width: 100%;
+}
+
+.nav-burg-toggle .nav-burg-toggle-bar {
+  margin-top: 0;
+}
+
+.nav-burg-toggle .nav-burg-toggle-bar::after {
+  margin-top: 0.8rem;
+}
+
+.nav-burg-toggle .nav-burg-toggle-bar::before {
+  margin-top: -0.8rem;
+}
+
+.nav-burg-toggle.expanded .nav-burg-toggle-bar {
+  background: transparent;
+}
+
+.nav-burg-toggle.expanded .nav-burg-toggle-bar::after,
+.nav-burg-toggle.expanded .nav-burg-toggle-bar::before {
+  background: $color-black;
+  margin-top: 0;
+}
+
+.nav-burg-toggle.expanded .nav-burg-toggle-bar::after {
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.nav-burg-toggle.expanded .nav-burg-toggle-bar::before {
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
