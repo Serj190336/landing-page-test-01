@@ -23,6 +23,7 @@
 
 @import "abstracts/mixins";
 @import "abstracts/variables";
+//@import "base/animations";
 @import "base/base";
 @import "base/typography";
 @import "components/clients-box";
@@ -34,6 +35,7 @@
 
 // Sections between header and footer
 .section {
+  position: relative;
   margin-top: 9.6rem;
   &-heading {
     position: relative;
@@ -60,4 +62,11 @@
       background-color: $color-white;
     }
   }
+}
+
+// Section Anchors
+.anchor {
+  position: absolute;
+  top: -8rem;
+  left: 0;
 }

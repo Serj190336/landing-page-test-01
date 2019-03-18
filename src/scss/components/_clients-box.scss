@@ -8,5 +8,17 @@
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    a {
+      display: inline-block;
+      img {
+        display: block;
+      }
+    }
+    a:hover {
+      color: black;
+      img {
+        filter: brightness(0%);
+      }
+    }
   }
 }

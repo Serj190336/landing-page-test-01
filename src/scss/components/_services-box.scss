@@ -16,6 +16,18 @@
     padding-left: 9rem;
   }
 
+  &-link {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  &-link,
+  &-link:visited,
+  &-link:hover,
+  &-link:active {
+    text-decoration: none;
+    color: inherit;
+  }
+
   &__logo {
     float: left;
     width: 13.6rem;
@@ -26,6 +38,7 @@
       margin: 0 auto;
     }
   }
+
   &__text {
     float: left;
     width: 30rem;

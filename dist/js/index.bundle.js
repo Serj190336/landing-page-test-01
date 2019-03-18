@@ -92,6 +92,15 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_scss_main_scss__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _sticky_nav_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
+/* harmony import */ var _sticky_nav_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_sticky_nav_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _smooth_scroll_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3);
+/* harmony import */ var _smooth_scroll_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_smooth_scroll_js__WEBPACK_IMPORTED_MODULE_2__);
+// main SASS file
+ // JS sticky menu
+
+ // smooth scrolling to anchors
+
 
 
 /***/ }),
@@ -99,6 +108,69 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+var nav = document.querySelector("#nav");
+var topOfNav = nav.offsetTop; // distance between menu bar and top of the window
+
+function fixNav() {
+  if (window.scrollY >= topOfNav) {
+    document.body.style.paddingTop = nav.offsetHeight + "px";
+    nav.classList.add("fixed-nav");
+  } else {
+    document.body.style.paddingTop = 0;
+    nav.classList.remove("fixed-nav");
+  }
+}
+
+window.addEventListener("scroll", fixNav);
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports) {
+
+// smooth scrolling to anchors
+var anchorlinks = document.querySelectorAll('a[href^="#anchor-"]');
+var _iteratorNormalCompletion = true;
+var _didIteratorError = false;
+var _iteratorError = undefined;
+
+try {
+  var _loop = function _loop() {
+    var item = _step.value;
+    // relitere
+    item.addEventListener("click", function (e) {
+      var hashval = item.getAttribute("href");
+      var target = document.querySelector(hashval);
+      target.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+      history.pushState(null, null, hashval);
+      e.preventDefault();
+    });
+  };
+
+  for (var _iterator = anchorlinks[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+    _loop();
+  }
+} catch (err) {
+  _didIteratorError = true;
+  _iteratorError = err;
+} finally {
+  try {
+    if (!_iteratorNormalCompletion && _iterator.return != null) {
+      _iterator.return();
+    }
+  } finally {
+    if (_didIteratorError) {
+      throw _iteratorError;
+    }
+  }
+}
 
 /***/ })
 /******/ ]);
