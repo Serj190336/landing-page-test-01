@@ -1,29 +1,5 @@
-/*
-@import "abstracts/functions";
-
-
-@import "base/animations";
-@import "base/base";
-@import "base/typography";
-@import "base/utilities";
-@import "components/bg-video";
-@import "components/button";
-@import "components/card";
-@import "components/composition";
-@import "components/feature-box";
-@import "components/tours-box";
-@import "components/form";
-@import "components/popup";
-@import "components/story";
-@import "layout/footer";
-
-@import "layout/navigation";
-@import "pages/home";
-*/
-
 @import "abstracts/mixins";
 @import "abstracts/variables";
-//@import "base/animations";
 @import "base/base";
 @import "base/typography";
 @import "components/clients-box";
@@ -32,12 +8,11 @@
 @import "components/team-box";
 @import "layout/footer";
 @import "layout/header";
-@import "layout/grid";
 
 // Sections between header and footer
 .section {
   position: relative;
-  margin-top: 9.6rem;
+  margin-top: 8.6rem;
   &-heading {
     position: relative;
     &__content {
@@ -62,6 +37,15 @@
       padding: 0 1.7rem 0 1.7rem;
       background-color: $color-white;
     }
+  }
+  @include respond(md) {
+    margin-top: 8rem;
+  }
+  @include respond(sm) {
+    margin-top: 6rem;
+  }
+  @include respond(xs) {
+    margin-top: 5rem;
   }
 }
 

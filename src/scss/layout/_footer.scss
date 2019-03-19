@@ -22,10 +22,20 @@ footer {
   -ms-flex-align: center;
   align-items: center;
 
+  @include respond(xs) {
+    height: 8rem;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
   &__logo {
     display: block;
     height: 4.2rem;
-    width: auto;
+
+    @include respond(xs) {
+      padding-top: 1rem;
+    }
   }
 
   &__links {
@@ -37,6 +47,10 @@ footer {
     }
     a:not(:last-child) {
       margin-right: 4rem;
+
+      @include respond(xs) {
+        margin-right: 2rem;
+      }
     }
   }
 }

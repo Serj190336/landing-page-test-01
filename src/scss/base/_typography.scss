@@ -3,19 +3,18 @@ body {
   font-style: normal;
   font-weight: normal;
   font-size: 1.6rem;
-  line-height: normal;
-
-  @include respond(md) {
-    background-color: blue;
-  }
-
-  @include respond(sm) {
-    background-color: green;
-  }
 }
 
 h1 {
   @include font($main-font, normal, normal, 5.8rem, normal);
+
+  @include respond(lg) {
+    line-height: 85%;
+    font-size: 5rem;
+  }
+  @include respond(sm) {
+    font-size: 4.5rem;
+  }
 }
 
 h2 {
@@ -28,22 +27,41 @@ h3 {
 
 h4 {
   @include font($main-font, normal, normal, 1.6rem, normal);
+
+  @include respond(lg) {
+    font-size: 2rem;
+  }
 }
 
 h5 {
   @include font($main-font, normal, normal, 1.4rem, normal);
 }
 
-// Top nav
+// Top navbar
 .header-nav {
   &__btns {
     @include font($main-font, normal, normal, 1.6rem, normal);
+
+    @include respond(lg) {
+      font-size: 2rem;
+    }
   }
 }
-// Heading text and button
+// Header text and button
 .header-content {
   &__text-sub {
     @include font($main-font, normal, normal, 3.2rem, 5.7rem);
+
+    @include respond(lg) {
+      line-height: 4rem;
+    }
+    @include respond(sm) {
+      font-size: 2.8rem;
+      line-height: 3rem;
+    }
+    @include respond(xs) {
+      font-size: 2.6rem;
+    }
   }
   &__btn {
     a {

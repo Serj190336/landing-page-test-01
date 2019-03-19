@@ -1,33 +1,73 @@
 .team {
-  margin-top: 4.8rem;
+  margin-top: 3.3rem;
   margin-bottom: 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
-  &-box {
-    margin-top: 4.8rem;
-    flex-basis: calc(33.33%);
-    justify-content: center;
-    flex-direction: column;
-  }
-}
 
-.team-box {
-  &__logo {
-    float: left;
-    padding-left: 0.4rem;
-    padding-right: 3.4rem;
-    img {
-      display: block;
-      margin: 0 auto;
-    }
+  @include respond(md) {
+    margin-top: 3rem;
   }
-  &__text {
-    padding-top: 1rem;
-    float: left;
-    &-sub {
-      margin-top: 1.2rem;
-      color: $color-fonts-3;
+
+  &-box {
+    margin-top: 6.3rem;
+    -ms-flex-preferred-size: calc(33.33%);
+    flex-basis: calc(33.33%);
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+
+    @include respond(md) {
+      margin-top: 3rem;
+    }
+
+    &__logo {
+      float: left;
+      padding-left: 0.4rem;
+      padding-right: 3.4rem;
+
+      @include respond(md) {
+        padding-right: 0.6rem;
+      }
+      @include respond(sm) {
+        float: none;
+      }
+
+      img {
+        display: block;
+        margin: 0 auto;
+
+        @include respond(md) {
+          width: 7rem;
+        }
+      }
+    }
+
+    &__text {
+      padding-top: 1rem;
+      float: left;
+
+      @include respond(sm) {
+        clear: both;
+        padding: 0;
+        margin-top: -1rem;
+        text-align: center;
+        float: none;
+      }
+      &-sub {
+        margin-top: 1.2rem;
+        color: $color-fonts-3;
+      }
     }
   }
 }

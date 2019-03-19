@@ -2,22 +2,49 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  margin-top: 0.6rem;
+  padding-bottom: 0.4rem;
   &-box {
     margin-top: 5rem;
     flex-basis: calc(25%);
     justify-content: center;
     flex-direction: column;
     text-align: center;
+
+    @include respond(lg) {
+      flex-basis: calc(33.33%);
+      width: 100px;
+    }
+    @include respond(sm) {
+      margin-top: 3rem;
+    }
+    @include respond(xs) {
+      margin-top: 2rem;
+    }
+
     a {
       display: inline-block;
+
+      @include respond(lg) {
+      }
+
       img {
         display: block;
+
+        @include respond(lg) {
+          width: 90%;
+        }
       }
     }
+
     a:hover {
-      color: black;
       img {
         filter: brightness(0%);
+      }
+      @include respond(sm) {
+        img {
+          filter: none;
+        }
       }
     }
   }

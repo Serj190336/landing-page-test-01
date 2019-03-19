@@ -1,50 +1,138 @@
 .services {
-  margin-top: 4.8rem;
+  margin-top: 2.6rem;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  flex-wrap: wrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
   flex-direction: row;
-  &-box {
-    margin-top: 4.8rem;
-    flex-basis: calc(50%);
-    justify-content: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-content: space-between;
+  -ms-flex-line-pack: justify;
+  align-content: space-between;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+  @include respond(lg) {
+    margin-top: 0;
+  }
+  @include respond(sm) {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
   }
 }
 
-.services-box {
-  &:nth-child(even) {
-    padding-left: 9rem;
-  }
+.services {
+  &-box {
+    margin-top: 6.8rem;
+    -ms-flex-preferred-size: calc(50%);
+    flex-basis: calc(50%);
 
-  &-link {
-    display: inline-block;
-    vertical-align: middle;
-  }
-  &-link,
-  &-link:visited,
-  &-link:hover,
-  &-link:active {
-    text-decoration: none;
-    color: inherit;
-  }
-
-  &__logo {
-    float: left;
-    width: 13.6rem;
-    padding-top: 3.2rem;
-    padding-right: 3rem;
-    img {
-      display: block;
-      margin: 0 auto;
+    @include respond(lg) {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      margin-top: 2rem;
     }
-  }
+    @include respond(sm) {
+      -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+    }
+    @include respond(xs) {
+      margin-top: 0;
+    }
 
-  &__text {
-    float: left;
-    width: 30rem;
-    &-sub {
-      margin-top: 1.2rem;
-      color: $color-fonts-3;
+    &:nth-child(even) {
+      padding-left: 9rem;
+
+      @include respond(lg) {
+        padding-left: 0;
+      }
+    }
+
+    &-link {
+      display: inline-block;
+      vertical-align: middle;
+
+      @include respond(xs) {
+        margin-top: 3.2rem;
+        text-align: center;
+      }
+    }
+    &-link,
+    &-link:visited,
+    &-link:hover,
+    &-link:active {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    &__logo {
+      float: left;
+      width: 13.6rem;
+      padding-top: 3.2rem;
+      padding-right: 3rem;
+      @include respond(lg) {
+        padding-right: 0rem;
+        clear: both;
+      }
+      @include respond(sm) {
+        padding-right: 0rem;
+        clear: none;
+      }
+      @include respond(xs) {
+        float: none;
+        margin: 0 auto;
+        padding-top: 0rem;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+
+    &__text {
+      float: left;
+      width: 30rem;
+      @include respond(lg) {
+        clear: both;
+        width: 36rem;
+      }
+      @include respond(md) {
+        clear: both;
+        width: 32rem;
+      }
+      @include respond(sm) {
+        clear: none;
+        width: 30rem;
+      }
+      &-sub {
+        margin-top: 1.2rem;
+        color: $color-fonts-3;
+
+        @include respond(sm) {
+          margin-top: 0;
+        }
+      }
     }
   }
 }

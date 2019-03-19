@@ -1,14 +1,17 @@
 header {
   position: relative;
-  padding-top: 3.2rem;
-  // width: 100%;
-  // margin: 3.2rem auto 0 auto;
+  padding-top: 3rem;
+
+  @include respond(sm) {
+    padding-top: 0;
+  }
 }
 
 // Header text and button
 .header-content {
-  margin-top: 10.4rem;
-  min-height: 42rem;
+  margin-top: 20.4rem;
+  margin-bottom: 9.8rem;
+  min-height: 42.4rem;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
@@ -28,16 +31,34 @@ header {
   -ms-flex-align: start;
   align-items: flex-start;
 
-  &__main-text {
-    -webkit-align-self: center;
-    -ms-flex-item-align: center;
-    align-self: center;
+  @include respond(lg) {
+    min-height: 30rem;
+    margin-top: 16rem;
+  }
+  @include respond(md) {
+    margin-top: 12rem;
+  }
+  @include respond(sm) {
+    min-height: 40rem;
+    margin-top: 0rem;
+    padding-top: 10rem;
+  }
+
+  &__text-main {
     color: $color-fonts-1;
+
+    @include respond(lg) {
+      margin-top: 2rem;
+    }
   }
 
   &__text-sub {
     margin-top: -5.6rem;
     color: $color-fonts-2;
+
+    @include respond(lg) {
+      margin-top: 2rem;
+    }
   }
 
   &__btn {
@@ -59,11 +80,22 @@ header {
       -webkit-box-shadow: 0px 4px 14px -4px rgba(50, 50, 50, 0.85);
       -moz-box-shadow: 0px 4px 14px -4px rgba(50, 50, 50, 0.85);
       box-shadow: 0px 4px 14px -4px rgba(50, 50, 50, 0.85);
+
+      @include respond(lg) {
+        margin-top: 2rem;
+      }
     }
     a:hover {
       -webkit-transform: translateY(-0.12rem);
       transform: translateY(-0.12rem);
-      background-color: darken($color-sheme-1, 5%);
+      background-color: darken($color-sheme-1, 4%);
+    }
+    @include respond(sm) {
+      a:hover {
+        -webkit-transform: none;
+        transform: none;
+        background-color: $color-sheme-1;
+      }
     }
     a:active {
       -webkit-transform: translateY(0.12rem);

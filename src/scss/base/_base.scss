@@ -28,7 +28,12 @@ body {
   margin: 0 auto;
   padding: 0 1.7rem 0 1.7rem;
 }
+// header footer container
 .container-0-padding {
   max-width: 120rem;
   margin: 0 auto;
+
+  @include respond(lg) {
+    padding: 0 1.7rem 0 1.7rem;
+  }
 }

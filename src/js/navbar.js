@@ -13,27 +13,33 @@ function fullNav() {
       class="header-nav__logo"
   /></a>
   <div class="header-nav__btns">
-    <a href="#anchor-services">Services</a>
-    <a href="#anchor-clients">Clients</a>
-    <a href="#anchor-team">Our team</a>
-    <a href="#">Contact Us</a>
+    <div class="header-nav__btns-wrap"><a href="#anchor-services">Services</a></div>
+    <div class="header-nav__btns-wrap"><a href="#anchor-clients">Clients</a></div>
+    <div class="header-nav__btns-wrap"><a href="#anchor-team">Our team</a></div>
+    <div class="header-nav__btns-wrap"><a href="#">Contact Us</a></div>
   </div>
 </div>`;
 }
 
 // render html of small-navbar
 function smallNav() {
-  navbar.innerHTML = `<div class="nav-burg-toggle">
-<div class="nav-burg-toggle-bar"></div>
-</div>
-<div class="nav-burg">
-<ul>
-  <li><a href="#anchor-services">Services</a></li>
-  <li><a href="#anchor-clients">Clients</a></li>
-  <li><a href="#anchor-team">Our team</a></li>
-  <li><a href="#">Contact Us</a></li>
-</ul>
-</div>`;
+  navbar.innerHTML = `
+  <img
+      src="images/valtech.svg"
+      alt="Valtech_ Logo"
+      class="logo-pos-fixed"
+  />
+  <div class="nav-burg-toggle">
+  <div class="nav-burg-toggle-bar"></div>
+  </div>
+  <div class="nav-burg">
+    <ul>
+    <li><a href="#anchor-services">Services</a></li>
+    <li><a href="#anchor-clients">Clients</a></li>
+    <li><a href="#anchor-team">Our team</a></li>
+    <li><a href="#">Contact Us</a></li>
+    </ul>
+    </div>`;
 }
 
 // Load and render navbar depending on screen width

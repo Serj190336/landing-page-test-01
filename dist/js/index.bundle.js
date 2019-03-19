@@ -81,96 +81,143 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_scss_main_scss__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _sticky_nav_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
-/* harmony import */ var _sticky_nav_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_sticky_nav_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _smooth_scroll_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3);
-/* harmony import */ var _smooth_scroll_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_smooth_scroll_js__WEBPACK_IMPORTED_MODULE_2__);
-// main SASS file
- // JS sticky menu
-
- // smooth scrolling to anchors
-
-
-
-/***/ }),
-/* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
 
 /***/ }),
-/* 2 */
-/***/ (function(module, exports) {
+/* 1 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-var nav = document.querySelector("#nav");
-var topOfNav = nav.offsetTop; // distance between menu bar and top of the window
+"use strict";
+__webpack_require__.r(__webpack_exports__);
 
-function fixNav() {
-  if (window.scrollY >= topOfNav) {
-    document.body.style.paddingTop = nav.offsetHeight + "px";
-    nav.classList.add("fixed-nav");
-  } else {
-    document.body.style.paddingTop = 0;
-    nav.classList.remove("fixed-nav");
-  }
-}
+// EXTERNAL MODULE: ./src/scss/main.scss
+var main = __webpack_require__(0);
 
-window.addEventListener("scroll", fixNav);
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports) {
-
+// CONCATENATED MODULE: ./src/js/smooth-scroll.js
 // smooth scrolling to anchors
-var anchorlinks = document.querySelectorAll('a[href^="#anchor-"]');
-var _iteratorNormalCompletion = true;
-var _didIteratorError = false;
-var _iteratorError = undefined;
+var applySmoothScroll = function applySmoothScroll() {
+  var anchorlinks = document.querySelectorAll('a[href^="#anchor-"]');
+  var _iteratorNormalCompletion = true;
+  var _didIteratorError = false;
+  var _iteratorError = undefined;
 
-try {
-  var _loop = function _loop() {
-    var item = _step.value;
-    // relitere
-    item.addEventListener("click", function (e) {
-      var hashval = item.getAttribute("href");
-      var target = document.querySelector(hashval);
-      target.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-      });
-      history.pushState(null, null, hashval);
-      e.preventDefault();
-    });
-  };
-
-  for (var _iterator = anchorlinks[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-    _loop();
-  }
-} catch (err) {
-  _didIteratorError = true;
-  _iteratorError = err;
-} finally {
   try {
-    if (!_iteratorNormalCompletion && _iterator.return != null) {
-      _iterator.return();
+    var _loop = function _loop() {
+      var item = _step.value;
+      // relitere
+      item.addEventListener("click", function (e) {
+        var hashval = item.getAttribute("href");
+        var target = document.querySelector(hashval);
+        target.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+        history.pushState(null, null, hashval);
+        e.preventDefault();
+      });
+    };
+
+    for (var _iterator = anchorlinks[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+      _loop();
     }
+  } catch (err) {
+    _didIteratorError = true;
+    _iteratorError = err;
   } finally {
-    if (_didIteratorError) {
-      throw _iteratorError;
+    try {
+      if (!_iteratorNormalCompletion && _iterator.return != null) {
+        _iterator.return();
+      }
+    } finally {
+      if (_didIteratorError) {
+        throw _iteratorError;
+      }
     }
   }
-}
+};
+
+/* harmony default export */ var smooth_scroll = (applySmoothScroll);
+// CONCATENATED MODULE: ./src/js/navbar.js
+
+var navbar = document.querySelector("#navbar");
+var maxPhoneWidth = 768; // render html of big-navbar
+
+function fullNav() {
+  navbar.innerHTML = "<div class=\"header-nav container-0-padding\" id=\"nav\">\n  <a href=\"#\"\n    ><img\n      src=\"images/valtech.svg\"\n      alt=\"Valtech_ Logo\"\n      class=\"header-nav__logo\"\n  /></a>\n  <div class=\"header-nav__btns\">\n    <div class=\"header-nav__btns-wrap\"><a href=\"#anchor-services\">Services</a></div>\n    <div class=\"header-nav__btns-wrap\"><a href=\"#anchor-clients\">Clients</a></div>\n    <div class=\"header-nav__btns-wrap\"><a href=\"#anchor-team\">Our team</a></div>\n    <div class=\"header-nav__btns-wrap\"><a href=\"#\">Contact Us</a></div>\n  </div>\n</div>";
+} // render html of small-navbar
+
+
+function smallNav() {
+  navbar.innerHTML = "\n  <img\n      src=\"images/valtech.svg\"\n      alt=\"Valtech_ Logo\"\n      class=\"logo-pos-fixed\"\n  />\n  <div class=\"nav-burg-toggle\">\n  <div class=\"nav-burg-toggle-bar\"></div>\n  </div>\n  <div class=\"nav-burg\">\n    <ul>\n    <li><a href=\"#anchor-services\">Services</a></li>\n    <li><a href=\"#anchor-clients\">Clients</a></li>\n    <li><a href=\"#anchor-team\">Our team</a></li>\n    <li><a href=\"#\">Contact Us</a></li>\n    </ul>\n    </div>";
+} // Load and render navbar depending on screen width
+
+
+function loadNav() {
+  if (window.screen.width >= maxPhoneWidth) {
+    navbar_renderFullNav();
+  } else {
+    navbar_renderSmallNav();
+  }
+} // Big screens navbar
+
+
+var navbar_renderFullNav = function renderFullNav() {
+  fullNav(); // render html of big-navbar
+
+  var nav = document.querySelector("#nav");
+  var topOfNav = nav.offsetTop;
+
+  function fixNav() {
+    if (window.scrollY >= topOfNav) {
+      nav.classList.add("fixed-nav");
+    } else {
+      nav.classList.remove("fixed-nav");
+    }
+  }
+
+  fixNav(); // check for Y offset to stick menu to the top
+
+  window.addEventListener("scroll", fixNav);
+  smooth_scroll(); // smooth scrolling to anchors
+}; // Small screens navbar
+
+
+var navbar_renderSmallNav = function renderSmallNav() {
+  smallNav(); // render html of small-navbar
+
+  var hamburger = {
+    navToggle: document.querySelector(".nav-burg-toggle"),
+    nav: document.querySelector(".nav-burg"),
+    doToggle: function doToggle(e) {
+      e.preventDefault();
+      this.navToggle.classList.toggle("expanded");
+      this.nav.classList.toggle("expanded");
+    }
+  };
+  hamburger.navToggle.addEventListener("click", function (e) {
+    hamburger.doToggle(e);
+  });
+  hamburger.nav.addEventListener("click", function (e) {
+    hamburger.doToggle(e);
+  });
+  smooth_scroll(); // smooth scrolling to anchors
+}; // Check user screen size when content loaded
+
+
+document.addEventListener("DOMContentLoaded", loadNav); // Check user screen size when resizing screen
+
+window.onresize = loadNav;
+// CONCATENATED MODULE: ./src/js/index.js
+ // main SASS file
+
+ // JS sticky menu
 
 /***/ })
 /******/ ]);

@@ -1,11 +1,3 @@
-@mixin clearfix {
-  &::after {
-    content: "";
-    clear: both;
-    display: block;
-  }
-}
-
 @mixin font($font-family, $font-style, $font-weight, $font-size, $line-height) {
   font-family: $font-family;
   font-style: $font-style;
@@ -14,7 +6,6 @@
   line-height: $line-height;
 }
 
-//---------
 // media queries
 @mixin respond($breakpoint) {
   @if $breakpoint == xs {

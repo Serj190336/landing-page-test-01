@@ -1,15 +1,12 @@
-<div align="center">
-    <a href="#"><img alt="Webpack image" src="https://raw.githubusercontent.com/Serj190336/webpack-react-starter-kit/master/src/images/webpack.png" float="left";></a>
-    <a href="#"><img alt="Webpack image" src="https://raw.githubusercontent.com/Serj190336/webpack-react-starter-kit/master/src/images/react.png" float="left";></a>
-    <a href="#"><img alt="Webpack image" src="https://raw.githubusercontent.com/Serj190336/webpack-react-starter-kit/master/src/images/babel.png" float="left";></a>
-    <a href="#"><img alt="Webpack image" src="https://raw.githubusercontent.com/Serj190336/webpack-react-starter-kit/master/src/images/sass.png" float="left";></a>
-</div>
+# Landing Page task
 
-# Webpack React Frontend Starterkit
+### INFO
 
-Lightweigth kit with musthave features for frontend development.
+Created with [my development tool](https://github.com/Serj190336/webpack-react-starter-kit "Webpack-starter-kit")
 
-Alternative [version](https://github.com/Serj190336/webpack-react-eslint-kit "webpack-react-eslint-kit") with ESLint support for React and ES6+
+Final production version in <b>dist</b> folder.
+
+Development version in <b>src</b> folder.
 
 ### Installation
 
@@ -31,7 +28,6 @@ npm run build
 
 ### Features:
 
-- React
 - ES6+ Support via Babel v7
 - SASS Support
 - [Autoprefixer](https://www.npmjs.com/package/eslint-config-react-app "Autoprefixer") plugin to parse CSS and add vendor prefixes to CSS rules using values from [Can I Use](https://caniuse.com/ "Can I Use website")
