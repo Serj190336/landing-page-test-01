@@ -111,7 +111,6 @@ var applySmoothScroll = function applySmoothScroll() {
   try {
     var _loop = function _loop() {
       var item = _step.value;
-      // relitere
       item.addEventListener("click", function (e) {
         var hashval = item.getAttribute("href");
         var target = document.querySelector(hashval);
